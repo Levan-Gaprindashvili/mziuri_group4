@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+
+{%block content%}
+<h1> add_task </h1>
+<form method="post">
+    <label>
+        new task:
+        <input type="text" name="task">
+    </label>
+    <input type="submit" value="add task">
+</form>
+<hr>
+{% if tasks|length == 0 %}
+<p>no tasks</p>
+{%else %}
+<ul>
+    {%for task in tasks %}
+    <li>{{task}}</li>
+</ul>
+{% endif %}
+{% endblock %}

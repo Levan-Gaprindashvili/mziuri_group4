@@ -1,0 +1,12 @@
+{%extends "base.html"%}
+
+{%block title%}Task Catalog - Home{%endblock%}
+
+{%block content%}
+<h1>tasks</h1>
+<ul>
+    {% for task in tasks %}
+    <li><a href="/">{{task}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock% %}
